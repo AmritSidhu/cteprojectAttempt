@@ -1,0 +1,8 @@
+<h1 align='center'>Hey <%= @user.email %>, these are your saved items being tracked...</h1>
+
+<% @user.products.each do |product| %>
+  <ul align='center' style="list-style-type: none">
+    <li><%= url_host(product.product_url) %></li>
+    <li><%=link_to product.product_url, product.product_url %></li>
+  </ul>
+<% end %>

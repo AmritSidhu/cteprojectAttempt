@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users
 
   root 'home#index'
+  get '/product', to: 'products#new'
+  post '/product', to: 'products#create'
 
   get '/login', to: 'sessions#new'
   post '/login' => 'sessions#create'
