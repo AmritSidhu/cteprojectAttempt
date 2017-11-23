@@ -1,7 +1,7 @@
-class CreateProducts < ActiveRecord::Migration[5.1]
+class CreateUploads < ActiveRecord::Migration[5.1]
   def change
-    create_table :products do |t|
-      t.string :product_url
+    create_table :uploads do |t|
+      t.string :scenario
       t.references(:user, index: true)
       t.timestamps
     end
